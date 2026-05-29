@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const authRoutes = require("./routes/auth");
+const projectRoutes = require("./routes/projects");
 dotenv.config();
 
 const app = express();
@@ -15,6 +16,12 @@ app.use(
 );
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Taskflow API is running");
+});
+app.use("/api/auth", authRoutes);
+app.use("/api/projects", projectRoutes);
+
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
@@ -26,7 +33,3 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-app.use("/api/auth", authRoutes);
-app.get("/", (req, res) => {
-  res.send("Taskflow API is running");
-});
