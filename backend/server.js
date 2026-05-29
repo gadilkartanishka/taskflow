@@ -2,8 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const authRoutes = require("./routes/auth");
-const projectRoutes = require("./routes/projects");
 dotenv.config();
 
 const app = express();
@@ -19,9 +17,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Taskflow API is running");
 });
-app.use("/api/auth", authRoutes);
-app.use("/api/projects", projectRoutes);
-
+app.use("/api/auth", require("./routes/auth"));
+app.use("/api/projects", require("./routes/projects"));
+app.use("/api/tasks", require("./routes/tasks"));
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
