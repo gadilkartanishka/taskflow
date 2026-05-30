@@ -1,10 +1,10 @@
-# Taskflow 🗂️
+# Taskflow
 
 A full-stack Project & Task Management app built with the MERN stack and Redux Toolkit.
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -23,17 +23,17 @@ A full-stack Project & Task Management app built with the MERN stack and Redux T
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔐 **Authentication** — Signup, Login, JWT-based session persistence
-- 📁 **Projects** — Create, view, and delete projects
-- ✅ **Tasks** — Create tasks inside projects, mark complete/incomplete, delete tasks, optional due date
-- 🌗 **Light / Dark Mode**
-- ⚡ **Redux** — Global state management with separate slices for auth, projects, and tasks
+- **Authentication** — Signup, Login, JWT-based session persistence
+- **Projects** — Create, view, and delete projects
+- **Tasks** — Create tasks inside projects, mark complete/incomplete, delete tasks, optional due date
+- **Light / Dark Mode**
+- **Redux** — Global state management with separate slices for auth, projects, and tasks
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 taskflow/
@@ -56,7 +56,7 @@ taskflow/
 
 ---
 
-## ⚙️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -101,7 +101,7 @@ npm start
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Auth
 
